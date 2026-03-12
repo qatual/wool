@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>wool</title>
+    <link rel="icon" type="image/png" href="/resources/logo_128.png">
+    <style>
+      :root {
+        --bg: #0c0c0d;
+        --bg2: #18181a;
+        --border: #2c2c2c;
+        --text: #cccccc;
+        --muted: #555;
+      }
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      html, body {
+        height: 100%;
+        background: var(--bg);
+        color: var(--text);
+        font-family: monospace;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0;
+      }
+      a, a:visited, a:hover, a:active {
+        color: inherit;
+      }
+      .header {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 16px;
+      }
+      .header h1 {
+        font-size: 28px;
+        font-weight: normal;
+        font-family: monospace;
+      }
+      form {
+        display: flex;
+        gap: 6px;
+        width: min(400px, 90vw);
+      }
+      input[type="text"] {
+        flex: 1;
+        background: var(--bg2);
+        border: 1px solid var(--border);
+        color: var(--text);
+        padding: 8px 10px;
+        font-family: monospace;
+        font-size: 13px;
+        outline: none;
+      }
+      input[type="text"]:focus {
+        border-color: #444;
+      }
+      input[type="submit"] {
+        background: var(--bg2);
+        border: 1px solid var(--border);
+        color: var(--text);
+        padding: 8px 14px;
+        font-family: monospace;
+        font-size: 13px;
+        cursor: pointer;
+      }
+      input[type="submit"]:hover {
+        border-color: #444;
+      }
+      footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: space-between;
+        padding: 8px 10px;
+      }
+      footer p, footer a {
+        font-size: 11px;
+        color: var(--muted);
+        text-decoration: none;
+        font-family: monospace;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <img src="/resources/logo_128.png" width="48" height="48">
+      <h1>wool</h1>
+    </div>
+    <form action="https://html.duckduckgo.com/html/" method="get">
+      <input type="text" placeholder="Search the web..." name="q" autofocus>
+      <input type="submit" value="go">
+    </form>
+
+    <footer>
+      <a href="https://github.com/qatual/wool">wool <span id="wool_version">v0.0.0</span></a>
+      <p>save as "HTML only" — proxy still works</p>
+      <a href="https://github.com/qatual/wool">github</a>
+    </footer>
+  </body>
+</html>
